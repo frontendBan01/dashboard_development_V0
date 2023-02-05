@@ -5,10 +5,13 @@ import GaugeChart from '../Charts/GaugeChart/GaugeChart';
 
 const CustomGaugeChart = () => {
   return (
-    <Card sx={{ minHeight: '60vh' }}>
-      <CardContent sx={{ display: 'flex', flexDirection: 'column' }}>
-        <Typography sx={{ fontSize: 14 }} color='text.secondary' gutterBottom>
-          Project under phrases
+    <Card sx={{ minHeight: '45vh' ,backgroundColor: '#F6F9FE', '&:hover': {
+      boxShadow: '0px 0px 50px #E57300 inset',
+      cursor: 'pointer',
+    },}}>
+      <CardContent sx={{ display: 'flex', flexDirection: 'column'}}>
+        <Typography sx={{ fontSize: 16, fontFamily: 'Montserrat, Medium', color: '#000000'}} gutterBottom>
+          Derrain Quality
         </Typography>
         <Divider />
         <Box component='div' sx={{ display: 'flex', justifyContent: 'center' }}>

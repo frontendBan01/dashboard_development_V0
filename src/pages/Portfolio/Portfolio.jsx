@@ -12,17 +12,25 @@ import CustomGaugeChart from '../../components/CustomGaugeChart/CustomGaugeChart
 const Portfolio = () => {
   return (
     <>
-      <Grid container spacing={2}>
-        <Grid item xs={3}>
+      <Grid container spacing={1}>
+        <Grid item xs={2.4}>
+          <Typography sx={{ fontSize: 14 , marginLeft: '10px' }} >Project Topology</Typography>
           <Dropdown fullwidth />
         </Grid>
-        <Grid item xs={3}>
+        <Grid item xs={2.4}>
+          <Typography sx={{ fontSize: 14 , marginLeft: '10px'}} >Zone</Typography>
+          <Dropdown fullwidth />
+        </Grid>
+        <Grid item xs={2.4}>
+          <Typography sx={{ fontSize: 14 , marginLeft: '10px'}} >City</Typography>
           <Dropdown />
         </Grid>
-        <Grid item xs={3}>
+        <Grid item xs={2.4}>
+          <Typography sx={{ fontSize: 14 , marginLeft: '10px'}} >Project Stage</Typography>
           <Dropdown />
         </Grid>
-        <Grid item xs={3}>
+        <Grid item xs={2.4}>
+        <Typography sx={{ fontSize: 14 , marginLeft: '10px'}} >Project Cost</Typography>
           <Dropdown />
         </Grid>
       </Grid>
@@ -38,10 +46,10 @@ const Portfolio = () => {
           <PieChart />
         </Grid>
         <Grid item xs={3}>
-          <CustomGaugeChart />
+          <CustomGaugeChart/>
         </Grid>
         <Grid item xs={3}>
-          <CustomGaugeChart />
+          <CustomGaugeChart/>
         </Grid>
       </Grid>
       {/* Project Details */}

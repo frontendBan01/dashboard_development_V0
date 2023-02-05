@@ -1,3 +1,4 @@
+import { Height } from '@mui/icons-material';
 import { Card, CardContent, Divider, Typography } from '@mui/material';
 import { Box } from '@mui/system';
 import React from 'react';
@@ -6,14 +7,16 @@ import PieChartsWithCustomizedLabels from '../Charts/PieChartsWithCustomizedLabe
 const PieChart = () => {
   return (
     <Card>
-      <CardContent sx={{ display: 'flex', flexDirection: 'column' }}>
-        <Typography sx={{ fontSize: 14 }} color='text.secondary' gutterBottom>
+      <CardContent sx={{ display: 'flex', flexDirection: 'column'}}>
+        <Typography sx={{ fontSize: 16, color:'#000000', fontFamily: 'Montserrat, SemiBold' }} color='text.secondary' gutterBottom>
           Project under phrases
         </Typography>
-        <Divider />
+        <Divider/>
         <Box component='div' sx={{ display: 'flex', justifyContent: 'center' }}>
           <PieChartsWithCustomizedLabels />
         </Box>
+      </CardContent>
+      <CardContent sx= {{backgroundColor:'#F4F3FC'}}>
         <Box component='div' sx={{ display: 'flex', margin: '0.3rem 0' }}>
           <Box
             sx={{

@@ -17,10 +17,12 @@ const Projects = () => {
   const Search = styled('div')(({ theme }) => ({
     position: 'relative',
     borderRadius: theme.shape.borderRadius,
-    backgroundColor: alpha(theme.palette.text.primary, 0.15),
+    border: '1px solid #05054629',
     '&:hover': {
-      backgroundColor: alpha(theme.palette.text.secondary, 0.25),
+      border: '1px solid #5855DF',
+      boxShadow: '0px 0px 6px #05054629',
     },
+    backgroundColor: '#FFFFFF',
     marginRight: theme.spacing(2),
     marginLeft: 0,
     width: '100%',
@@ -37,6 +39,7 @@ const Projects = () => {
     display: 'flex',
     alignItems: 'center',
     justifyContent: 'center',
+    color: '#CBCBCB',
   }));
   const StyledInputBase = styled(InputBase)(({ theme }) => ({
     color: 'inherit',
@@ -66,18 +69,45 @@ const Projects = () => {
             />
           </Search>
         </Grid>
+        <Box component='div' onClick={() => {
+          console.info("I'm a button.");
+        }}
+          sx={{
+            width: '80px',
+            height: '35px',
+            borderRadius: '5%',
+            backgroundColor: '#9E9CE6',
+            '&:hover': {
+              backgroundColor: '#5855DF',
+            },
+            cursor: 'pointer',
+            borderRadius: '6%',
+            marginTop: '18px',
+          }}>
+          <Typography component='div' sx={{ padding: '6px 0px 0px 10px', color: 'white' }}>Search</Typography>
+        </Box>
       </Grid>
       {/* Project List */}
       <Grid container spacing={2} sx={{ marginTop: '2rem' }}>
         <Grid item xs={6}>
-          <Card>
+          <Card sx={{
+            '&:hover': {
+              boxShadow: '0px 0px 6px #9E9CE6',
+              cursor: 'pointer',
+            },
+          }}>
             <CardContent>
               <ProjectList />
             </CardContent>
           </Card>
         </Grid>
         <Grid item xs={6}>
-          <Card>
+          <Card sx={{
+            '&:hover': {
+              boxShadow: '0px 0px 6px #9E9CE6',
+              cursor: 'pointer',
+            },
+          }}>
             <CardContent>
               <ProjectList />
             </CardContent>
