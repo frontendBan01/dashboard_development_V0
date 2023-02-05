@@ -64,10 +64,7 @@ const Navbar = () => {
   const theme = useTheme();
   return (
     <>
-      <AppBar
-        position='fixed'
-        sx={{ background: 'white', zIndex: '1', boxShadow: 'none' }}
-      >
+      <AppBar position='fixed' sx={{ background: 'white', zIndex: '1' }}>
         <Toolbar className={classes.toolBar}>
           {isMobile && (
             <IconButton
@@ -128,10 +125,9 @@ const Navbar = () => {
                             aria-labelledby='composition-button'
                             onKeyDown={handleListKeyDown}
                           >
-                            <MenuItem onClick={handleClose}>Profile</MenuItem>
-                            <MenuItem onClick={handleClose}>
-                              My account
-                            </MenuItem>
+                            <MenuItem onClick={handleClose}>Account</MenuItem>
+                            <MenuItem onClick={handleClose}>Language</MenuItem>
+                            <MenuItem onClick={handleClose}>Quick Help</MenuItem>
                             <MenuItem onClick={handleClose}>Logout</MenuItem>
                           </MenuList>
                         </ClickAwayListener>

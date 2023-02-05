@@ -34,11 +34,11 @@ const Business = () => {
                   sx={{ display: 'flex', justifyContent: 'space-between' }}
                 >
                   <Typography
-                    sx={{ fontSize: 14 }}
+                    sx={{ fontSize: 16, color:'#3C3838' ,fontFamily: 'Montserrat, SemiBold' }}
                     color='text.secondary'
                     gutterBottom
                   >
-                    Word of the Day
+                    Project Across India
                   </Typography>
                   <Typography variant='h5' component='div'>
                     <DonutSmallIcon />
@@ -60,11 +60,11 @@ const Business = () => {
                   sx={{ display: 'flex', justifyContent: 'space-between' }}
                 >
                   <Typography
-                    sx={{ fontSize: 14 }}
+                    sx={{ fontSize: 16 ,color:'#3C3838' ,fontFamily: 'Montserrat, SemiBold'}}
                     color='text.secondary'
                     gutterBottom
                   >
-                    Word of the Day
+                    Total Square Footage
                   </Typography>
                   <Typography variant='h5' component='div'>
                     <LayersIcon />
@@ -86,11 +86,11 @@ const Business = () => {
                   sx={{ display: 'flex', justifyContent: 'space-between' }}
                 >
                   <Typography
-                    sx={{ fontSize: 14 }}
+                    sx={{ fontSize: 16, color:'#3C3838' ,fontFamily: 'Montserrat, SemiBold' }}
                     color='text.secondary'
                     gutterBottom
                   >
-                    Word of the Day
+                    Total Project Cost
                   </Typography>
                   <Typography variant='h5' component='div'>
                     <MonetizationOnIcon />
@@ -114,12 +114,10 @@ const Business = () => {
             <Grid item xs={4}>
               <Card>
                 <CardContent sx={{ display: 'flex', flexDirection: 'column' }}>
-                  <Typography
-                    sx={{ fontSize: 14 }}
-                    color='text.secondary'
-                    gutterBottom
+                <Typography
+                    sx={{ fontSize: 14, color:'#000000' , fontFamily: 'Montserrat, Medium' }}
                   >
-                    Project under phrases
+                    Zone Wise Project Distribution
                   </Typography>
                   <Divider />
                   <Box
@@ -128,6 +126,8 @@ const Business = () => {
                   >
                     <PieChartWithPaddingAngle />
                   </Box>
+                  </CardContent>
+                <CardContent sx = {{backgroundColor:'#F4F3FC'}}>
                   <Box
                     component='div'
                     sx={{ display: 'flex', margin: '0.3rem 0' }}
@@ -178,11 +178,10 @@ const Business = () => {
               <Card>
                 <CardContent sx={{ display: 'flex', flexDirection: 'column' }}>
                   <Typography
-                    sx={{ fontSize: 14 }}
-                    color='text.secondary'
+                    sx={{ fontSize: 14, color:'#000000' , fontFamily: 'Montserrat, Medium' }}
                     gutterBottom
                   >
-                    Project under phrases
+                    Typology Wise Project Distribution
                   </Typography>
                   <Divider />
                   <Box
@@ -191,6 +190,8 @@ const Business = () => {
                   >
                     <PieChartWithPaddingAngle />
                   </Box>
+                </CardContent>
+                <CardContent sx = {{backgroundColor:'#F4F3FC'}}>
                   <Box
                     component='div'
                     sx={{ display: 'flex', margin: '0.3rem 0' }}
@@ -240,10 +241,10 @@ const Business = () => {
             {/* Showing Project typology status */}
             <Grid item xs={12}>
               <Card>
-                <CardContent>
+                <CardContent sx={{backgroundColor : '#F4F3FC'}}>
                   <Grid container spacing={2}>
                     <Grid xs={12}>
-                      <Typography component='h3' sx={{ margin: '0 1rem' }}>
+                      <Typography component='h3' sx={{ margin: '0 1rem', fontSize: '20px', color: '#7C828A',fontFamily: 'Montserrat, SemiBold' , }}>
                         Project Typology Status
                       </Typography>
                     </Grid>
@@ -307,6 +308,9 @@ const Business = () => {
                     {/* Showing treeMap chart and bar chart */}
                     <Grid item xs={6} sx={{ marginTop: '2rem' }}>
                       <Card>
+                        <Typography component='h3' sx={{padding: '1rem', fontSize: '16px', textAlign:'center', color: '#3C3838',fontFamily: 'Montserrat, SemiBold' ,backgroundColor : '#F4F3FC'}}>
+                          Typology Square Footage
+                        </Typography>
                         <Box component='div' sx={{ maxHeight: '100vh' }}>
                           <CustomContentTreeMap />
                         </Box>
@@ -314,7 +318,10 @@ const Business = () => {
                     </Grid>
                     <Grid item xs={6} sx={{ marginTop: '2rem' }}>
                       <Card>
-                        <Box component='div' sx={{ maxHeight: '100vh' }}>
+                        <Typography component='h3' sx={{padding: '1rem', fontSize: '16px', textAlign:'center', color: '#3C3838',fontFamily: 'Montserrat, SemiBold' ,backgroundColor : '#F4F3FC'}}>
+                          Cost
+                        </Typography>
+                        <Box component='div' sx={{ maxHeight: '100vh' ,backgroundColor : '#F4F3FC'}}>
                           <BarChartNoPadding />
                         </Box>
                       </Card>
@@ -329,24 +336,24 @@ const Business = () => {
         <Grid item xs={4}>
           <Grid item xs={12}>
             <Card>
-              <CardContent>
+              <CardContent sx={{backgroundColor: '#F4F3FC'}}>
                 <Grid container spacing={2}>
                   <Grid xs={12}>
-                    <Typography component='h3' sx={{ margin: '0 1rem' }}>
-                      Project Typology Status
+                    <Typography component='h3' sx={{ margin: '0 1rem' , fontSize: '20px', color: '#7C828A' ,fontFamily: 'Montserrat, SemiBold' }}>
+                      Zone Wise Project Status
                     </Typography>
                   </Grid>
                   {/* Show title with color tag */}
-                  <Grid item xs={3} sx={{ marginTop: '2rem' }}>
+                  <Grid item xs={3} sx={{ marginTop: '.5rem' }}>
                     <Project />
                   </Grid>
-                  <Grid item xs={3} sx={{ marginTop: '2rem' }}>
+                  <Grid item xs={3} sx={{ marginTop: '.5rem' }}>
                     <Project />
                   </Grid>
-                  <Grid item xs={3} sx={{ marginTop: '2rem' }}>
+                  <Grid item xs={3} sx={{ marginTop: '.5rem' }}>
                     <Project />
                   </Grid>
-                  <Grid item xs={3} sx={{ marginTop: '2rem' }}>
+                  <Grid item xs={3} sx={{ marginTop: '.5rem' }}>
                     <Project />
                   </Grid>
                 </Grid>
@@ -359,13 +366,19 @@ const Business = () => {
                 <Box component='div' sx={{ maxHeight: '100vh' }}>
                   <CustomContentTreeMap />
                 </Box>
+                <Typography component='h3' sx={{padding: '1rem', fontSize: '16px', textAlign:'center', color: '#3C3838',fontFamily: 'Montserrat, SemiBold' ,backgroundColor : '#F4F3FC'}}>
+                  Zonal Square Footage
+                </Typography>
               </Card>
             </Grid>
             <Grid item xs={12} sx={{ marginTop: '2rem' }}>
               <Card>
-                <Box component='div' sx={{ maxHeight: '100vh' }}>
+                <Box component='div' sx={{ maxHeight: '100vh',backgroundColor : '#F4F3FC' }}>
                   <BarChartNoPadding />
                 </Box>
+                <Typography component='h3' sx={{padding: '1rem', fontSize: '16px', textAlign:'center', color: '#3C3838',fontFamily: 'Montserrat, SemiBold' ,backgroundColor : '#F4F3FC'}}>
+                  Cost
+              </Typography>
               </Card>
             </Grid>
           </Grid>

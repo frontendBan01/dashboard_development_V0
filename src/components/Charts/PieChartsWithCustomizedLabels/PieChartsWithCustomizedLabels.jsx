@@ -1,5 +1,5 @@
 import React, { useCallback, useState } from 'react';
-import { PieChart, Pie, Cell } from 'recharts';
+import { PieChart, Pie, Cell, Tooltip } from 'recharts';
 
 const data = [
   { name: 'Group A', value: 400 },
@@ -38,13 +38,13 @@ const renderCustomizedLabel = ({
 };
 export default function PieChartsWithCustomizedLabels() {
   return (
-    <PieChart width={400} height={400}>
+    <PieChart width={300} height={200}>
       <Pie
         data={data}
-        cx={200}
-        cy={200}
+        cx={140}
+        cy={100}
         labelLine={false}
-        label={renderCustomizedLabel}
+        // label={renderCustomizedLabel}
         outerRadius={80}
         fill='#8884d8'
         dataKey='value'
@@ -53,6 +53,7 @@ export default function PieChartsWithCustomizedLabels() {
           <Cell key={`cell-${index}`} fill={COLORS[index % COLORS.length]} />
         ))}
       </Pie>
+      <Tooltip />
     </PieChart>
   );
 }
